@@ -42,6 +42,14 @@ git config --global user.name "Mat Geist"
 # TODO: can we automate alfred, dropbox, 1password setup/config?
 # TODO: automate ssh key registration with github?
 
+#  Atom Packages
+# ex-mode
+# linter
+# linter-eslint
+# set-syntax
+# language-javascript-jsx
+# vim-mode-plus
+
 # disable guest account
 defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
