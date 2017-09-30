@@ -9,7 +9,8 @@ sudo xcodebuild -license accept
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install some apps from brew
-brew cask qnstall google-chrome
+brew cask install google-chrome
+brew cask install firefoxdeveloperedition
 brew cask install alfred
 brew cash install skitch
 brew cask install spotify
