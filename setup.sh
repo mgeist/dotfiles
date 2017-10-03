@@ -55,6 +55,9 @@ git config --global core.editor nvim
 brew tap caskroom/fonts
 brew cask install font-fira-code
 
+# iterm color setup
+curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
+
 # TODO: alfred/spotlight - can we automate setting the hotkeys?
 # TODO: dropbox - can we get my specific version?
 # TODO: slack - auto add my specific servers?
@@ -81,4 +84,5 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server All
 
 
 echo "Post installation tips:"
-echo "- Don't forget to set fira-code font in iterm2"
+echo "- Set fira-code font in iterm2"
+echo "- Set itermcolor scheme (file is OneDark.itermcolors)"
