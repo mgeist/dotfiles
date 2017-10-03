@@ -47,11 +47,16 @@ git config --global user.email "matgeist@gmail.com"
 git config --global user.name "Mat Geist"
 git config --global core.editor nvim
 
-# TODO: dotfiles
+# TODO: alfred/spotlight - can we automate setting the hotkeys?
+# TODO: dropbox - can we get my specific version?
+# TODO: slack - auto add my specific servers?
+# TODO: automate logging into any cli tools ie heroku toolbelt
+# TODO: dotfiles - got zsh and vim, are there others?
+# TODO: symlink nvimrc to vimrc
+# TODO: run nvim :PlugInstall (and vim)
 # TODO: atom package setup
-# TODO: zshrc
 # TODO: can we automate alfred, dropbox, 1password setup/config?
-# TODO: automate ssh key registration with github?
+# TODO: automate ssh key registration with github? - can be a python script
 
 #  Atom Packages
 # ex-mode
@@ -64,3 +69,4 @@ git config --global core.editor nvim
 # disable guest account
 defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
+# TODO: dock speedup / animation removal amongst others. refer to work zshrc
