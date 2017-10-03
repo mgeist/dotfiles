@@ -18,10 +18,11 @@ brew cask install filezilla
 brew cask install vlc
 brew cask install dropbox
 brew cask install 1password
-brew cask install atom
 brew cask install slack
 
 # install dev related stuff from brew
+brew cask install atom
+brew install neovim
 brew install node
 brew install python
 brew install go --cross-compile-common # install golang w/ compiling cross os/architectures
