@@ -2,6 +2,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -24,3 +26,17 @@ endif
 
 syntax on
 colorscheme onedark
+
+" python support setup
+let g:python2_host_prog = '/usr/bin/python'
+filetype plugin on
+
+" run syntastic lint on open
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

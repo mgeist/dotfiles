@@ -36,9 +36,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ln -sf `pwd`/.zshrc ~/.zshrc
 # symlink nvimrc
 ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
+ln -sf `pwd`/init.vim ~/.vimrc
 # set up vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# setup python support for neovim
+pip2 install neovim
+pip2 install flake8
 
 brew services start postgresql
 
