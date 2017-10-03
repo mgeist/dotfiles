@@ -40,8 +40,10 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 brew services start postgresql
 
+# git setup
 git config --global user.email "matgeist@gmail.com"
 git config --global user.name "Mat Geist"
+git config --global core.editor nvim
 
 # TODO: dotfiles
 # TODO: atom package setup
