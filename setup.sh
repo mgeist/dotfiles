@@ -32,6 +32,11 @@ brew install zsh
 brew install postgresql # TODO: verify this functions and doesnt need any additional setup
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# symlink nvimrc
+ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
+# set up vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 brew services start postgresql
 
