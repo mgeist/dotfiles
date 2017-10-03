@@ -51,6 +51,10 @@ git config --global user.email "matgeist@gmail.com"
 git config --global user.name "Mat Geist"
 git config --global core.editor nvim
 
+# font setup
+brew tap caskroom/fonts
+brew cask install font-fira-code
+
 # TODO: alfred/spotlight - can we automate setting the hotkeys?
 # TODO: dropbox - can we get my specific version?
 # TODO: slack - auto add my specific servers?
@@ -74,3 +78,7 @@ git config --global core.editor nvim
 defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
 # TODO: dock speedup / animation removal amongst others. refer to work zshrc
+
+
+echo "Post installation tips:"
+echo "- Don't forget to set fira-code font in iterm2"
