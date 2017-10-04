@@ -30,6 +30,7 @@ brew install heroku-toolbelt
 brew cask install iterm2
 brew install zsh
 brew install postgresql # TODO: verify this functions and doesnt need any additional setup
+brew install the_silver_searcher
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # symlink zshrc
@@ -37,6 +38,14 @@ ln -sf `pwd`/.zshrc ~/.zshrc
 # symlink nvimrc
 ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
 ln -sf `pwd`/init.vim ~/.vimrc
+# symlink zsh theme
+ln -sf `pwd`/zsh/dbprompt.zsh-theme ~/.oh-my-zsh/themes/dbprompt.zsh-theme
+# symlink zsh aliases
+# TODO: split out work specific and personal specific
+mkdir ~/zsh
+ln -sf `pwd`/zsh/aliases.zsh ~/zsh/aliases.zsh
+ln -sf `pwd`/zsh/completions ~/.oh-my-zsh/completions
+
 # set up vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -80,7 +89,12 @@ curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/mast
 # disable guest account
 defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
 defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
-# TODO: dock speedup / animation removal amongst others. refer to work zshrc
+# "Set Dock to auto-hide and remove the auto-hiding delay? (y/n)"
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+# "Disabling press-and-hold for special keys in favor of key repeat"
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# TODO: look into https://gist.github.com/brandonb927/3195465 and related for more tweaks
 
 
 echo "Post installation tips:"

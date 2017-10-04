@@ -1,0 +1,2 @@
+#compdef setdb
+compadd `listdb`

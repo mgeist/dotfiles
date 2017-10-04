@@ -4,6 +4,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/syntastic'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -31,7 +33,7 @@ colorscheme onedark
 let g:python2_host_prog = '/usr/bin/python'
 filetype plugin on
 
-" run syntastic lint on open
+" 'default' syntastic setup from their setup guide
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -40,3 +42,23 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" incremental search
+set incsearch
+" highlight matched search words
+set hlsearch
+
+" set 100 char limit indicator
+set colorcolumn=100
+
+" set line numbers
+set number
+" highlight active line number
+:highlight LineNr ctermfg=grey
+set cursorline
+
+" tab = 2 spaces
+set tabstop=2
+set expandtab
+" backspace can delete indents/newlines
+set backspace=2
