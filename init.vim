@@ -6,6 +6,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/syntastic'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 

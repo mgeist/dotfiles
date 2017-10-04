@@ -53,6 +53,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 pip2 install neovim
 pip2 install flake8
 
+# install vim plugins
+vim +PlugInstall +qall
+
 brew services start postgresql
 
 # git setup
