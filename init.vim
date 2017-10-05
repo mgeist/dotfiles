@@ -1,12 +1,13 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'joshdick/onedark.vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/syntastic'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
+Plug 'kchmck/vim-coffee-script'
+Plug 'groenewege/vim-less'
 
 call plug#end()
 
@@ -29,6 +30,7 @@ endif
 
 syntax on
 colorscheme onedark
+set background=dark
 
 " python support setup
 let g:python2_host_prog = '/usr/bin/python'
@@ -43,6 +45,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" reload files when they change on disk
+set autoread
 
 " incremental search
 set incsearch
@@ -59,7 +64,8 @@ set number
 set cursorline
 
 " tab = 2 spaces
-set tabstop=2
 set expandtab
+set tabstop=2
+set shiftwidth=2
 " backspace can delete indents/newlines
 set backspace=2
