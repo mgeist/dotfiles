@@ -1,40 +1,83 @@
+"--- PLUGINS ---"
 call plug#begin('~/.local/share/nvim/plugged')
 
+" color scheme
 Plug 'joshdick/onedark.vim'
+" editorconfig file support
 Plug 'editorconfig/editorconfig-vim'
+" linting
 Plug 'scrooloose/syntastic'
+" find files fast
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" comment/uncomment code
 Plug 'tpope/vim-commentary'
+" support coffeescript
 Plug 'kchmck/vim-coffee-script'
+" support less
 Plug 'groenewege/vim-less'
 
 call plug#end()
+" plug#end() automatically sets the following:
+" filetype plugin indent on
+" syntax enable
 
+"--- REGULAR VIM SETUP ---"
+set nocompatible
+
+" reload files when they change on disk
+set autoread
+
+" use tab to navigate splits
+nnoremap <tab> <C-w><C-w>
+nnoremap <s-tab> <C-w><left>
+
+"--- DISPLAY ---"
+colorscheme onedark
+set background=dark
+" set 100 char limit indicator
+set colorcolumn=101
+" set line numbers
+set number
+" highlight active line number
+:highlight LineNr ctermfg=grey
+set cursorline
+
+"--- SEARCH ---"
+" incremental search
+set incsearch
+" highlight matched search words
+set hlsearch
+" ignore case unless capitalized letters are present
+set ignorecase smartcase
+nnoremap <ESC><ESC> :nohlsearch<cr>
+
+"--- SPECIAL KEYS ---"
+" tab = 2 spaces
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+" backspace can delete indents/newlines
+set backspace=2
+
+"--- PLUGIN SPECIFIC SETUP ---"
+" python support setup (+Python)
+let g:python2_host_prog = '/usr/bin/python'
+
+" onedark
 " From: https://github.com/joshdick/onedark.vim
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
 if (empty($TMUX))
   if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
   if (has("termguicolors"))
     set termguicolors
   endif
 endif
 
-syntax on
-colorscheme onedark
-set background=dark
-
-" python support setup
-let g:python2_host_prog = '/usr/bin/python'
-filetype plugin on
+" fzf keybinding
+noremap <c-p> :FZF<cr>
 
 " 'default' syntastic setup from their setup guide
 set statusline+=%#warningmsg#
@@ -46,26 +89,3 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" reload files when they change on disk
-set autoread
-
-" incremental search
-set incsearch
-" highlight matched search words
-set hlsearch
-
-" set 100 char limit indicator
-set colorcolumn=100
-
-" set line numbers
-set number
-" highlight active line number
-:highlight LineNr ctermfg=grey
-set cursorline
-
-" tab = 2 spaces
-set expandtab
-set tabstop=2
-set shiftwidth=2
-" backspace can delete indents/newlines
-set backspace=2
