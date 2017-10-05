@@ -31,6 +31,9 @@ brew cask install iterm2
 brew install zsh
 brew install postgresql # TODO: verify this functions and doesnt need any additional setup
 brew install the_silver_searcher
+
+pip2 install virtualenvwrapper
+
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # symlink zshrc
