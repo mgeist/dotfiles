@@ -29,6 +29,7 @@ brew install go --cross-compile-common # install golang w/ compiling cross os/ar
 brew install heroku-toolbelt
 brew cask install iterm2
 brew install zsh
+brew install direnv
 brew install postgresql # TODO: verify this functions and doesnt need any additional setup
 brew install the_silver_searcher
 
