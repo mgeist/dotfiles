@@ -16,6 +16,8 @@ plugins=(git virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
+alias fixsql="rm /Users/mat/Library/Application Support/Postgres/var-9.4/postmaster.pid"
+
 alias vim="nvim"
 alias gs="git status"
 alias gco="git checkout"
