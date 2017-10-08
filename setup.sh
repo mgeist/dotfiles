@@ -21,6 +21,7 @@ brew cask install 1password
 brew cask install slack
 
 # install dev related stuff from brew
+brew cask install pgadmin4
 brew cask install atom
 brew install neovim
 brew install node
