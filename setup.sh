@@ -21,6 +21,7 @@ brew cask install 1password
 brew cask install slack
 
 # install dev related stuff from brew
+brew cask install pgadmin4
 brew cask install atom
 brew install neovim
 brew install node
@@ -29,6 +30,7 @@ brew install go --cross-compile-common # install golang w/ compiling cross os/ar
 brew install heroku-toolbelt
 brew cask install iterm2
 brew install zsh
+brew install direnv
 brew install postgresql # TODO: verify this functions and doesnt need any additional setup
 brew install the_silver_searcher
 

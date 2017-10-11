@@ -26,5 +26,9 @@ alias vimrc="vim ~/.vimrc"
 alias nvimrc="vim ~/.config/nvim/init.vim"
 alias zshrc="vim ~/.zshrc"
 
+# include aliases file
 [ -f ~/zsh/aliases.zsh ] && source ~/zsh/aliases.zsh
+# set up direnv
+eval "$(direnv hook zsh)"
+# include fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
