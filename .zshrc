@@ -26,6 +26,9 @@ alias vimrc="vim ~/.vimrc"
 alias nvimrc="vim ~/.config/nvim/init.vim"
 alias zshrc="vim ~/.zshrc"
 
+# include hidden files and exclude .git in fzf searches
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
 # include aliases file
 [ -f ~/zsh/aliases.zsh ] && source ~/zsh/aliases.zsh
 # set up direnv
