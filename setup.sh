@@ -33,6 +33,7 @@ brew install zsh
 brew install direnv
 brew install postgresql # TODO: verify this functions and doesnt need any additional setup
 brew install the_silver_searcher
+brew install httpie
 
 # zsh plugins
 pip2 install virtualenvwrapper
