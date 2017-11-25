@@ -1,5 +1,8 @@
 # Prefer brew python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# Configure GOPATH
+export GOPATH="~/Projects/go"
+export PATH=$PATH:$GOROOT/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/mat/.oh-my-zsh

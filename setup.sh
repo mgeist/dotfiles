@@ -78,6 +78,9 @@ brew cask install font-fira-code
 # iterm color setup
 curl "https://raw.githubusercontent.com/nathanbuchar/atom-one-dark-terminal/master/scheme/iterm/One%20Dark.itermcolors" > ~/Downloads/OneDark.itermcolors
 
+# go setup
+mkdir -p ~/Projects/go
+
 # TODO: alfred/spotlight - can we automate setting the hotkeys?
 # TODO: dropbox - can we get my specific version?
 # TODO: slack - auto add my specific servers?
