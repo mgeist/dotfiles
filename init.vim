@@ -29,6 +29,8 @@ set nocompatible
 
 " reload files when they change on disk
 set autoread
+" dont create swap files
+set noswapfile
 
 " use tab to navigate splits
 nnoremap <tab> <C-w><C-w>
@@ -90,4 +92,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers=['eslint']
 
