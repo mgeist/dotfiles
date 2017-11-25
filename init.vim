@@ -18,6 +18,8 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'groenewege/vim-less'
 " automatically closes quotes, parens, etc
 Plug 'vim-scripts/delimitMate.vim'
+" make vim good at go
+Plug 'fatih/vim-go'
 
 call plug#end()
 " plug#end() automatically sets the following:
