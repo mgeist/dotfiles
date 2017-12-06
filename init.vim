@@ -20,6 +20,8 @@ Plug 'groenewege/vim-less'
 Plug 'vim-scripts/delimitMate.vim'
 " make vim good at go
 Plug 'fatih/vim-go'
+" support vue.js
+Plug 'posva/vim-vue'
 
 call plug#end()
 " plug#end() automatically sets the following:
