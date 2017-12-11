@@ -5,7 +5,7 @@ export GOPATH="$HOME/Projects/go"
 export PATH="$PATH:/usr/local/go/bin"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/mat/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -19,15 +19,20 @@ plugins=(git virtualenvwrapper zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-alias fixsql="rm /Users/mat/Library/Application Support/Postgres/var-9.4/postmaster.pid"
+alias fixsql="rm ~/Library/Application Support/Postgres/var-9.4/postmaster.pid"
 
 alias vim="nvim"
-alias gs="git status"
-alias gco="git checkout"
-alias ga="git add"
 alias vimrc="vim ~/.vimrc"
 alias nvimrc="vim ~/.config/nvim/init.vim"
 alias zshrc="vim ~/.zshrc"
+
+# git aliases
+alias gs="git status"
+alias gco="git checkout"
+alias ga="git add"
+alias gfp="git fetch -p"
+alias gr="git rebase"
+alias gm="git merge"
 
 # include hidden files and exclude .git in fzf searches
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
