@@ -12,6 +12,11 @@ setdb() {
   export DATABASE_URL=postgresql://`whoami`@localhost:5432/$1
 }
 
+unsetdb() {
+  unset DATABASE_URL
+}
+
 whichdb() {
   echo ${DATABASE_URL##*/}
 }
+
