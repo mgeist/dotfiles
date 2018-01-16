@@ -19,7 +19,7 @@ plugins=(git virtualenvwrapper zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-alias fixsql="rm ~/Library/Application Support/Postgres/var-9.4/postmaster.pid"
+alias fixsql="rm /usr/local/var/postgres/postmaster.pid"
 
 alias vim="nvim"
 alias vimrc="vim ~/.vimrc"
