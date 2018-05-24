@@ -31,6 +31,7 @@ brew cask install iterm2
 brew install zsh
 brew install direnv
 brew install postgresql
+brew install fzf
 brew install the_silver_searcher
 brew install httpie
 brew cask install licecap
