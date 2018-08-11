@@ -24,6 +24,8 @@ Plug 'fatih/vim-go'
 Plug 'posva/vim-vue'
 " status bar
 Plug 'bling/vim-airline'
+" linter
+Plug 'w0rp/ale'
 
 call plug#end()
 " plug#end() automatically sets the following:

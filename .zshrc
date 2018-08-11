@@ -43,3 +43,9 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 eval "$(direnv hook zsh)"
 # include fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mat.geist/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/mat.geist/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mat.geist/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/mat.geist/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
