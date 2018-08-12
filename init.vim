@@ -5,8 +5,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'joshdick/onedark.vim'
 " editorconfig file support
 Plug 'editorconfig/editorconfig-vim'
-" linting
-Plug 'scrooloose/syntastic'
 " find files fast
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -22,6 +20,8 @@ Plug 'vim-scripts/delimitMate.vim'
 Plug 'fatih/vim-go'
 " support vue.js
 Plug 'posva/vim-vue'
+" support jsx
+Plug 'mxw/vim-jsx'
 " status bar
 Plug 'bling/vim-airline'
 " linter
