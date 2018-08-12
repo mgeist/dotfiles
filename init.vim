@@ -18,6 +18,8 @@ Plug 'groenewege/vim-less'
 Plug 'vim-scripts/delimitMate.vim'
 " make vim good at go
 Plug 'fatih/vim-go'
+" make vim good at javascript
+Plug 'pangloss/vim-javascript'
 " support vue.js
 Plug 'posva/vim-vue'
 " support jsx
@@ -95,11 +97,3 @@ noremap <c-p> :FZF<cr>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
-
