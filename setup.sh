@@ -35,6 +35,7 @@ brew install fzf
 brew install the_silver_searcher
 brew install httpie
 brew cask install licecap
+brew install terraform
 
 # install oh-my-zsh
 http https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > /tmp/install.sh
