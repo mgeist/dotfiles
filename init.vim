@@ -20,10 +20,12 @@ Plug 'vim-scripts/delimitMate.vim'
 Plug 'fatih/vim-go'
 " make vim good at javascript
 Plug 'pangloss/vim-javascript'
-" support vue.js
+" make vim good at vue
 Plug 'posva/vim-vue'
-" support jsx
+" make vim good at jsx
 Plug 'mxw/vim-jsx'
+" make vim good at terraform
+Plug 'hashivim/vim-terraform'
 " status bar
 Plug 'bling/vim-airline'
 " linter
@@ -97,3 +99,6 @@ noremap <c-p> :FZF<cr>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" set terraform to fmt on save
+let g:terraform_fmt_on_save=1
