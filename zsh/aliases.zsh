@@ -20,3 +20,15 @@ whichdb() {
   echo ${DATABASE_URL##*/}
 }
 
+getpr() {
+  if (( $1 ));
+  then
+    REMOTE="upstream"
+    PR_ID=$1
+  else
+    REMOTE=$1
+    PR_ID=$2
+  fi
+  git fetch $REMOTE pull/$PR_ID/head
+  git checkout -b pr$PR_ID FETCH_HEAD
+}
