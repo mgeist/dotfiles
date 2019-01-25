@@ -30,6 +30,8 @@ Plug 'hashivim/vim-terraform'
 Plug 'bling/vim-airline'
 " linter
 Plug 'w0rp/ale'
+" typescript
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 " plug#end() automatically sets the following:

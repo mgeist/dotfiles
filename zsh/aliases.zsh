@@ -32,3 +32,12 @@ getpr() {
   git fetch $REMOTE pull/$PR_ID/head
   git checkout -b pr$PR_ID FETCH_HEAD
 }
+
+unhookdb() {
+  psql -d "$1" -U $USER -c "
+    SELECT pg_terminate_backend(pg_stat_activity.pid)
+      FROM pg_stat_activity
+      WHERE pg_stat_activity.datname = '$1'
+      AND pid <> pg_backend_pid();
+  "
+}

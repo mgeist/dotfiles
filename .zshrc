@@ -1,4 +1,5 @@
 # Prefer brew python
+export PATH="/usr/local/opt/gnupg@2.0/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # Configure GOPATH
 export GOPATH="$HOME/Projects/go"
