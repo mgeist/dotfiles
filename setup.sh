@@ -36,6 +36,9 @@ brew install the_silver_searcher
 brew install httpie
 brew cask install licecap
 brew install terraform
+brew install tmux
+
+gem install tmuxinator
 
 # install oh-my-zsh
 http https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > /tmp/install.sh
@@ -44,6 +47,7 @@ sh /tmp/install.sh
 
 mkdir ~/.config
 mkdir ~/.config/nvim
+mkdir ~/.bin
 # symlink zshrc
 ln -sf `pwd`/.zshrc ~/.zshrc
 # symlink nvimrc
@@ -56,6 +60,15 @@ ln -sf `pwd`/zsh/dbprompt.zsh-theme ~/.oh-my-zsh/themes/dbprompt.zsh-theme
 mkdir ~/zsh
 ln -sf `pwd`/zsh/aliases.zsh ~/zsh/aliases.zsh
 ln -sf `pwd`/zsh/completions ~/.oh-my-zsh/completions
+# symlink tmux config
+ln -sf `pwd`/tmux/.tmux.conf ~/.tmux.conf
+
+# setup tmuxinator completions
+http https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh > tmux/tmuxinator.zsh
+ln -sf `pwd`/tmux/tmuxinator.zsh ~/.bin/tmuxinator.zsh
+
+# setup tmuxinator configs
+ln -s `pwd`/tmux/tmuxinator/ ~/.config/
 
 # zsh plugins
 pip install virtualenvwrapper

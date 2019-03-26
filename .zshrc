@@ -8,6 +8,8 @@ export PATH="$PATH:/usr/local/go/bin"
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+export EDITOR="nvim"
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="dbprompt"
@@ -19,6 +21,7 @@ ZSH_THEME="dbprompt"
 plugins=(git virtualenvwrapper zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bin/tmuxinator.zsh
 
 alias fixsql="rm /usr/local/var/postgres/postmaster.pid"
 
